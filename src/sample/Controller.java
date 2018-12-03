@@ -50,7 +50,7 @@ public class Controller implements Initializable {
         cbCiklus.getSelectionModel().selectFirst();
         cbGodina.setItems(FXCollections.observableArrayList("Prva", "Druga", "Treca"));
         cbGodina.getSelectionModel().selectFirst();
-        cbOdsjek.setItems(FXCollections.observableArrayList("AA", "AE", "RI", "TK"));
+        cbOdsjek.setItems(FXCollections.observableArrayList("EE", "AE", "RI", "TK"));
         cbOdsjek.getSelectionModel().selectFirst();
 
         // ToggleGroup listener
