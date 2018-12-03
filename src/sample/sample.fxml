@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints halignment="RIGHT" maxWidth="240.0" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints valignment="BOTTOM"/>
+    </rowConstraints>
+    <children>
+        <!-- Osnovni podaci -->
+        <GridPane hgap="5.0" styleClass="form" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Ime*" />
+                <Label text="Prezime*" GridPane.rowIndex="1" />
+                <Label text="Index*" GridPane.rowIndex="2" />
+                <TextField fx:id="ime" GridPane.columnIndex="1" />
+                <TextField fx:id="prezime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="index" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+
+        <!-- Podaci o studiju -->
+        <GridPane hgap="5.0" styleClass="form" vgap="5.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="2">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Odsjek" />
+                <Label text="Godina" GridPane.rowIndex="1" />
+                <Label text="Ciklus" GridPane.rowIndex="2" />
+                <Label text="Status" GridPane.rowIndex="3" />
+                <Label text="Boracke kategorije" GridPane.rowIndex="5" />
+                <ChoiceBox fx:id="cbOdsjek" prefWidth="160.0" GridPane.columnIndex="1" />
+                <ChoiceBox fx:id="cbGodina" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ChoiceBox fx:id="cbCiklus" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <RadioButton mnemonicParsing="false" selected="true" text="Redovni" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="group1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" text="Redovni samofinansirajuci" toggleGroup="$group1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <CheckBox fx:id="borKateg" alignment="CENTER_RIGHT" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+
+        <!-- Kontakt podaci -->
+        <GridPane hgap="5.0" styleClass="form" vgap="5.0" GridPane.columnIndex="1">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Adresa" />
+                <Label text="Telefon" GridPane.rowIndex="1" />
+                <Label text="Email*" GridPane.rowIndex="2" />
+                <TextField fx:id="adresa" prefHeight="25.0" prefWidth="124.0" GridPane.columnIndex="1" />
+                <TextField fx:id="telefon" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+
+        <!-- Detaljni licni podaci -->
+        <GridPane hgap="5.0" styleClass="form" vgap="5.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="JMBG*" />
+                <Label text="Datum rodjenja" GridPane.rowIndex="1" />
+                <Label text="Grad rodjenja" GridPane.rowIndex="2" />
+                <TextField fx:id="jmbg" GridPane.columnIndex="1" />
+                <DatePicker fx:id="datum" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ComboBox fx:id="cbGrad" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+
+        <Button mnemonicParsing="false" onAction="#potvrdi" text="Potvrdi" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</GridPane>

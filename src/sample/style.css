@@ -1,0 +1,23 @@
+.root {
+    -fx-background-color: white;
+}
+
+.label {
+    -fx-text-fill: #212121;
+}
+
+.form {
+    -fx-border-color: #AAA;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+}
+
+
+.invalid {
+    -fx-background-color: #f48f9f;
+}
+
+.valid {
+
+    -fx-background-color: #8ff44e;
+}
